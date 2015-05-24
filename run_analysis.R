@@ -60,4 +60,4 @@ melted_data <- melt(cbind(data$y, data$subject, data$x),
 ### Apply mean function to melted dataset via dcast
 tidy_data <- dcast(melted_data, Subject + ActivityName ~ variable, mean)
 
-write.table(tidy_data, file = "tidy_dataset.txt")
+write.table(tidy_data, file = "tidy_dataset.txt", row.name=FALSE)
